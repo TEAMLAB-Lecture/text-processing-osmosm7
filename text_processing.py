@@ -35,9 +35,9 @@ def normalize(input_string):
     """
     input_string = input_string.lower()
     input_split = input_string.split(' ')
-    n = input_split.count(' ')
+    n = input_split.count('')
     for i in range(n):
-        input_split.remove(' ')
+        input_split.remove('')
     normalized_string = (' ').join(input_split)
     
     return normalized_string
