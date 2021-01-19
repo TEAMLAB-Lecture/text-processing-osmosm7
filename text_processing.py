@@ -33,7 +33,13 @@ def normalize(input_string):
              >>> tp.normalize(input_string2)
              'extra space'
     """
-    normalized_string = None
+    input_string = input_string.lower()
+    input_split = input_string.split(' ')
+    for i in input_split:
+        if i =='':
+            input_split.remove(i)
+    normalized_string = (' ').join(input_split)
+    
     return normalized_string
 
 
@@ -58,5 +64,14 @@ def no_vowels(input_string):
             >>> tp.normalize(input_string2)
             ''W lv Pythn!'
     """
-    no_vowel_string = None
+    
+    vowels = ['a','e','i','o','u','A','E','I','O','U']
+
+    for s in input_string:
+        if s in vowels:
+            input_string.remove(s)
+
+
+
+    no_vowel_string = input_string
     return no_vowel_string
