@@ -66,7 +66,7 @@ def no_vowels(input_string):
     """
     
     vowels = ['a','e','i','o','u','A','E','I','O','U']
-    input_string = input_string.split('')
+    input_string = list(input_string)
     for s in input_string:
         if s in vowels:
             input_string.remove(s)
